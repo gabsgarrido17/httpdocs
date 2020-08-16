@@ -9,8 +9,8 @@
 	$message = isset( $_POST['contact_message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['contact_message'] ) : "";
 	
 	//Headers
-	$to = "meyaqib@gmail.com";
-    $subject = 'Contact Us';
+	$to = "hola@olimpo.digital";
+    $subject = 'Lead';
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 	
@@ -20,7 +20,7 @@
 	//Email Send Function
     $send_email = mail($to, $subject, $message, $headers);
       
-    echo ($send_email) ? '<div class="success">Email has been sent successfully.</div>' : 'Error: Email did not send.';
+    echo ($send_email) ? '<div class="success">¡Gracias! En breve nos conctactaremos con usted.</div>' : 'Error: Email did not send.';
 }
 else
 {
